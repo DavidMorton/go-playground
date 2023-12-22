@@ -40,6 +40,28 @@ I decided to learn Go because... well, why not? I have my reasons. Here are some
 ## Notes on data types
 * **type conventions** Unlike most languages, the type of arrays are preceded by brackets instead of being succeeded by brackets. eg, ```[]string``` instead of ```string[]```
 * **map is like dict** - The ```map``` type is what would be considered a ```dict``` in python. You define both the key type and the value type. So a map of ints, keyed by string, would be map[string]int
+* **type declarations** - Even though two or more type declarations have the same underlying type, the compiler will ensure the correct type is passed to functions expecting one type or another... so the following code wouldn't compile. 
+
+```
+package main
+
+import (
+	"fmt"
+)
+
+type Celcius float64
+type Fahrenheit float64
+
+func main() {
+	var c Celcius = 100
+	f := convert(c) // This line won't compile because Celcius != Fahrenheit
+	fmt.Printf("%v celcius is %v fahrenheit", c, f)
+}
+
+func convert(f Fahrenheit) Celcius {
+	return Celcius((f - 32) * 5 / 9)
+}
+```
 
 ## Solutions to common issues
 

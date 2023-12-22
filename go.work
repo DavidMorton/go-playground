@@ -7,3 +7,7 @@ use ./webserver/counting
 use ./webserver/countingpath
 use ./webserver/drawing
 use ./golangconstructs/switch
+use ./golangconstructs/pointers
+use ./golangconstructs/types
+use ./golangconstructs/stringoverride
+use ./golangconstructs/popcount
