@@ -6,6 +6,7 @@ I decided to learn Go because... well, why not? I have my reasons. Here are some
 * Get used to typing ```go mod tidy``` alot. It's there to make sure the nice packages listed in go.mod match the ones in your source code.
 
 ## Various points
+* **case sensitivity** - Go is case sensitive
 * **main** - The application must start from a function called main. In this way, it's like C# (used to be before they added scripting).
 * **go run tidy** - When a new package is added, you must run ```go run tidy``` to download the package locally.
 * **workspaces (since 1.16)** - If you have subfolders within the workspace, you'll need to create a go.work file that identifies and uses all the sub-modules. To do this, run ```go work init ./mainfolder```
@@ -31,7 +32,11 @@ I decided to learn Go because... well, why not? I have my reasons. Here are some
 
    ![](./img/shortcut-after.png)
 * **range on an array** - calling ```range``` on a map *or* array is always going to yield two values. In the case of the map, the key is the first return and the value is the second return. In the case of an array, the key is going to be the index in the array, and the value is the value. This is different than other languages, where a foreach will yield only the single value contained within the array. 
+* **default in switch** - While it seems that, technically, the default case can be put anywhere in a switch statement, the static check will warn you, and suggest you put in as the first or last case in the switch.
    
+## File setups
+* **package vs module declarations** - Generally speaking, ```go mod init``` should be followed by the full path to the module. You want to see, for example,  ```module webserver/drawing``` in go.mod, but only ```package drawing``` within the actual go file that runs the module. This will allow modules to be moved around with relative ease. 
+
 ## Notes on data types
 * **type conventions** Unlike most languages, the type of arrays are preceded by brackets instead of being succeeded by brackets. eg, ```[]string``` instead of ```string[]```
 * **map is like dict** - The ```map``` type is what would be considered a ```dict``` in python. You define both the key type and the value type. So a map of ints, keyed by string, would be map[string]int

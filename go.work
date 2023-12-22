@@ -5,3 +5,5 @@ use ./greetings
 use ./webserver/basic
 use ./webserver/counting
 use ./webserver/counting_path
+use ./webserver/drawing
+use ./language_constructs/switch
