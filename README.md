@@ -1,6 +1,6 @@
 # Learning Go.
 
-I decided to learn Go because... well, why not? I have my reasons.
+I decided to learn Go because... well, why not? I have my reasons. Here are some of my notes. 
 
 ## The really important points
 * Get used to typing ```go mod tidy``` alot. It's there to make sure the nice packages listed in go.mod match the ones in your source code.
