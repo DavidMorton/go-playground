@@ -23,6 +23,14 @@ I decided to learn Go because... well, why not? I have my reasons. Here are some
    ```
 * **exporting** - Functions are private or exported based on capitalization rules. This makes Go strongly linked to the language conventions.
 * **make()** - Default values for variables must be initialized using the make() function. If you don't call make(), many values are unassigned. So declaring a map would be ```var m = make(map[string]int)``` for example.
+* **vscode helpers** - There are some spectacular helpers in go. The following intellisense, when selected...
+
+   ![](./img/shortcut-before.png)
+
+   will produce the following block of code
+
+   ![](./img/shortcut-after.png)
+* **range on an array** - calling ```range``` on a map *or* array is always going to yield two values. In the case of the map, the key is the first return and the value is the second return. In the case of an array, the key is going to be the index in the array, and the value is the value. This is different than other languages, where a foreach will yield only the single value contained within the array. 
    
 ## Notes on data types
 * **type conventions** Unlike most languages, the type of arrays are preceded by brackets instead of being succeeded by brackets. eg, ```[]string``` instead of ```string[]```

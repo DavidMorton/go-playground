@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"sort"
 	"sync"
 )
 
@@ -20,6 +21,18 @@ func Run_webserver() {
 func handler(w http.ResponseWriter, r *http.Request) {
 	mu.Lock()
 	counts[r.URL.Path]++
-	fmt.Fprintf(w, "You've called %q %d times", r.URL.Path, counts[r.URL.Path])
+	fmt.Fprintf(w, "Welcome, %q, You've called %q %d times\n", r.RemoteAddr, r.URL.Path, counts[r.URL.Path])
+
+	keys := make([]string, 0, len(r.Header))
+	for k := range r.Header {
+		keys = append(keys, k)
+	}
+
+	sort.Strings(keys)
+
+	for _, k := range keys {
+		v := r.Header[k]
+		fmt.Fprintf(w, "Header[%q] = %q\n", k, v)
+	}
 	mu.Unlock()
 }
