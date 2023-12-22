@@ -2,11 +2,11 @@ package main
 
 import (
 	"log"
-	"webserver"
+	"webserver/counting_path"
 )
 
 func main() {
 	log.SetPrefix("greetings: ")
 	log.SetFlags(0)
-	webserver.Start_webserver()
+	counting_path.Run_webserver()
 }

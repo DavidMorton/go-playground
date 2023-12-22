@@ -22,6 +22,7 @@ I decided to learn Go because... well, why not? I have my reasons. Here are some
    }
    ```
 * **exporting** - Functions are private or exported based on capitalization rules. This makes Go strongly linked to the language conventions.
+* **make()** - Default values for variables must be initialized using the make() function. If you don't call make(), many values are unassigned. So declaring a map would be ```var m = make(map[string]int)``` for example.
    
 ## Notes on data types
 * **type conventions** Unlike most languages, the type of arrays are preceded by brackets instead of being succeeded by brackets. eg, ```[]string``` instead of ```string[]```
