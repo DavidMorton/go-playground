@@ -2,6 +2,8 @@
 
 I decided to learn Go because... well, why not? I have my reasons. Here are some of my notes. 
 
+![](./img/waves.png)
+
 ## The really important points
 * Get used to typing ```go mod tidy``` alot. It's there to make sure the nice packages listed in go.mod match the ones in your source code.
 
@@ -62,6 +64,7 @@ func convert(f Fahrenheit) Celcius {
 	return Celcius((f - 32) * 5 / 9)
 }
 ```
+* **using type operators** - You cannot add an int32 and int64 together without explicit casting.
 
 ## Solutions to common issues
 

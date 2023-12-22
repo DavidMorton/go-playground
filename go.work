@@ -11,3 +11,6 @@ use ./golangconstructs/pointers
 use ./golangconstructs/types
 use ./golangconstructs/stringoverride
 use ./golangconstructs/popcount
+use ./golangconstructs/floatprecision
+use ./graphics/surfaceplot
+use ./golangconstructs/stringparts

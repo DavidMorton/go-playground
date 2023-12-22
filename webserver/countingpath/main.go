@@ -1,4 +1,4 @@
-package countingpath
+package main
 
 import (
 	"fmt"
